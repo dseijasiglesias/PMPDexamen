@@ -77,6 +77,11 @@ public class ItemListActivity extends AppCompatActivity
      */
     @Override
     public void onItemSelected(String id) {
+
+        if(getResources().getBoolean(R.bool.dual_panel)){
+            Toast.makeText(ItemListActivity.this, "Tumbado", Toast.LENGTH_LONG).show();
+        }
+
         if (mTwoPane) {
             Bundle arguments = new Bundle();
             arguments.putString(ItemDetailFragment.ARG_ITEM_ID, id);
