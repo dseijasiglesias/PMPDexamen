@@ -2,6 +2,7 @@ package com.example.android.pmpdexamen;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -68,6 +69,9 @@ public class ItemDetailFragment extends Fragment implements View.OnClickListener
 
         Button button = (Button) rootView.findViewById(R.id.button);
         button.setOnClickListener(this);
+
+        Intent intentResultado = (new Intent()).putExtra("resultado", "OK");
+        getActivity().setResult(Activity.RESULT_OK, intentResultado);
 
         return rootView;
     }

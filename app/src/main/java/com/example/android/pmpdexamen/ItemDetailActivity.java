@@ -83,7 +83,6 @@ public class ItemDetailActivity extends AppCompatActivity implements ItemDetailF
 
     @Override
     public void cerrar() {
-        setResult(101);
         finish();
     }
 }
