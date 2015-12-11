@@ -19,7 +19,7 @@ import android.view.MenuItem;
  * This activity is mostly just a 'shell' activity containing nothing
  * more than a {@link ItemDetailFragment}.
  */
-public class ItemDetailActivity extends AppCompatActivity {
+public class ItemDetailActivity extends AppCompatActivity implements ItemDetailFragment.MyFragmentListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,5 +78,12 @@ public class ItemDetailActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void cerrar() {
+        setResult(101);
+        finish();
     }
 }
